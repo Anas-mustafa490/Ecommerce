@@ -11,4 +11,5 @@ router.post("/resendotp",resendOtpController);
 router.get("/alluser", validAuthorize,
    isAuthorizeRole("admin","subadmin"),
     alluserController)
+
 module.exports = router;

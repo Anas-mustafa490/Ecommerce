@@ -23,8 +23,6 @@ app.use(session({
         collectionName: 'sessions'
     })
 }));
-// localhost:8080/api/v1
-
 
 app.get('/session', (req, res) => {
   console.log(req.session.user);
@@ -32,14 +30,8 @@ app.get('/session', (req, res) => {
   return res.send('API is running....');
 });
 
-
-
 app.use(process.env.BASE_ROUTE, _); 
-
 app.use(globalerrorhandler)
-
-
-
 app.listen(port, () => {
   console.log(`Server is running`);
 });
